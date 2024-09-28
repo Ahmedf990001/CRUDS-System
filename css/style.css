@@ -168,7 +168,7 @@ Presentation-Card
   transform: translate(-50%, -50%);
   width: 2px;
   height: 80%;
-  background-color: var(--text-color);
+  background-color: var();
 }
 
 .card li h3 {
