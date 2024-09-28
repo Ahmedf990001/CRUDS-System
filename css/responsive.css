@@ -28,3 +28,9 @@
     width: 300px;
   }
 }
+
+@media (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
