@@ -132,7 +132,6 @@ Inputs-Content
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
 }
 
 /* ********************
@@ -155,7 +154,6 @@ Presentation-Card
   padding: 10px 20px;
   position: relative;
   border-radius: 25px;
-  background-color: var(--primary-color);
   color: var(--text-color);
   box-shadow: var(--box-shadow);
   border-top: var(--border-top);
@@ -255,6 +253,7 @@ table {
   margin-top: 20px;
   border-spacing: 0 20px;
   color: var(--text-color);
+  overflow: auto;
 }
 
 table th {
