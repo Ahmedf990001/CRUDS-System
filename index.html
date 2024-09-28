@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUDS System</title>
+
+  <!-- ===== CSS-File ===== Font-Awesome -->
+  <link rel="stylesheet" href="css/all.min.css">
+
+  <!-- ===== CSS-File ===== Variables -->
+  <link rel="stylesheet" href="css/variables.css">
+
+  <!-- ===== CSS-File ===== Style -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ===== CSS-File ===== Responsive -->
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- ===== CSS-File ===== Style-Switcher -->
+  <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+  <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+  <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+  <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+  <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+  <link rel="stylesheet" href="css/styleSwitcher.css">
+
+</head>
+<body>
+
+  <!-- Start Main-Section -->
+  <main>
+
+    <!-- Start Color-Bar -->
+    <nav class="style-switcher ">
+      <ul>
+        <li class="style-switcher-toggler">
+          <i class="fas fa-cog fa-spin"></i>
+        </li>
+        <li class="dark-mode">
+          <i class="fa-solid fa-moon"></i>
+        </li>
+        <li onclick="setActiveStyle('color-1')" class="color-1"></li>
+        <li onclick="setActiveStyle('color-2')" class="color-2"></li>
+        <li onclick="setActiveStyle('color-3')" class="color-3"></li>
+        <li onclick="setActiveStyle('color-4')" class="color-4"></li>
+        <li onclick="setActiveStyle('color-5')" class="color-5"></li>
+      </ul>
+    </nav>
+    <!-- End ColorBar -->
+
+    <!-- Start Inputs-Section -->
+    <section class="inputs-section hidden">
+
+      <!-- Start Inputs-Content
+        Presentation-Card And Inputs -->
+      <div class="container inputs-content">
+
+        <!-- Start Presentation-Card -->
+        <ul class="card">
+          <li>
+            <h3><i class="fa-regular fa-star"></i> title</h3>
+            <span id="titleVal"></span>
+          </li>
+          <li>
+            <h3><i class="fa-solid fa-dollar-sign"></i> price</h3>
+            <span id="priceVal">$</span>
+          </li>
+          <li>
+            <h3><i class="fa-solid fa-plus"></i> taxes</h3>
+            <span id="taxesVal">$</span>
+          </li>
+          <li>
+            <h3><i class="fa-solid fa-plus"></i> ads</h3>
+            <span id="adsVal">$</span>
+          </li>
+          <li>
+            <h3><i class="fa-solid fa-minus"></i> discount</h3>
+            <span id="discountVal">-$</span>
+          </li>
+          <li>
+            <h3><i class="fa-solid fa-money-check-dollar"></i> total</h3>
+            <span id="totalVal">$0</span>
+          </li>
+          <li>
+            <h3><i class="fa-regular fa-flag"></i> category</h3>
+            <span id="categoryVal"></span>
+          </li>
+        </ul>
+        <!-- End Presentation-Card -->
+        
+        <!-- Start Inputs -->
+        <div class="inputs">
+          <div>
+            <input type="text" placeholder="Title" id="title">
+            <div id="errorTitleInput"></div>
+          </div>
+          <div class="price">
+            <div>
+            <input type="number" placeholder="Price" id="price">
+            <div id="erorrPriceInput"></div>
+            </div>
+            <div>
+              <input type="number" placeholder="Taxes" id="taxes">
+              <div id="erorrtaxesInput"></div>
+            </div>
+            <div>
+              <input type="number" placeholder="Ads" id="ads">
+              <div id="erorrAdsInput"></div>
+            </div>
+            <div>
+              <input type="number" placeholder="Discount" id="discount">
+              <div id="discountErorrInput"></div>
+            </div>
+          </div>
+          <input type="number" placeholder="Count" id="count">
+          <div>
+            <input type="text" placeholder="Category" id="category">
+            <div id="catErorrInput"></div>
+          </div>
+          <button id="create" onclick="createProduct()"><i class="fa-solid fa-plus"></i> Create</button>
+          <button id="dataReview"><i class="fa-regular fa-eye"></i> Data Review</button>
+        </div>
+        <!-- End Inputs -->
+      </div>
+      <!-- End Inputs-Content
+        Presentation-Card And Inputs -->
+
+      </section>
+    <!-- End Inputs-Section -->
+    
+    <!-- Start Outputs-Section -->
+    <section class="outputs-section ">
+
+      <!-- Start Outputs-Content
+        Head And Search And Outputs -->
+      <div class="container">
+
+        <!-- Start Head -->
+        <div class="head">
+          <h1>cruds</h1>
+          <p>product management system</p>
+        </div>
+        <!-- End Head -->
+
+        <!-- Start Search -->
+        <div class="search">
+          <button id="creationPage"><i class="fa-solid fa-pen-to-square"></i> Creation page</button>
+          <input type="text" placeholder="Search" id="search" onkeyup="searchData(this.value)">
+          <div class="btnSearch">
+            <button id="searchTitle"><i class="fa-solid fa-search"></i> Search By Title</button>
+            <button id="searchCategory"><i class="fa-solid fa-search"></i> Search By Category</button>
+          </div>
+          <div id="deleteAll">
+
+          </div>
+        </div>
+        <!-- End Search -->
+
+        <!-- Start Outputs -->
+        <table>
+
+          <!-- Start Outputs-Head -->
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+          <!-- End Outputs-Head -->
+          
+          <!-- Start Outputs-Items -->
+          <tbody id="tbody">
+
+          </tbody>
+          <!-- Start Outputs-Items -->
+
+        </table>
+        <!-- End Outputs -->
+
+      </div>
+      <!-- End Outputs-Content
+        Head And Search And Outputs -->
+
+    </section>
+    <!-- End Outputs-Section -->
+    
+  </main>
+  <!-- End Main-Section -->
+
+
+  <!-- ===== JS-File ===== Font-Awesome -->
+  <script src="js/all.min.js"></script>
+
+  <!-- ===== JS-File ===== Main -->
+  <script src="js/main.js"></script>
+
+  <!-- ===== JS-File ===== Style Switcher-->
+  <script src="js/styleSwitcher.js"></script>
+</body>
+</html>

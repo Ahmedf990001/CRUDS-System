@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #eee;
+  --bg-color:#eee;
+  --bg-color-2:#888;
+  --text-color: #444;
+  --text-color-2: #666;
+  --text-color-3: #fff;
+  --skin-color: #fff;
+
+
+  --box-shadow: inset 0 10px 5px rgba(0, 0, 0, 0.05),
+  0 10px 8px rgba(0, 0, 0, 0.05),
+  0 5px 15px rgba(0, 0, 0, 0.05),
+  inset 0 -10px 15px rgba(255, 255, 255, 0.9);
+  --border-top: solid 2px #fff;
+}
+
+body.dark {
+  --primary-color: #393939;
+  --bg-color: #151515;
+  --bg-color-2: #393939;
+  --text-color: #fff;
+  --text-color-2: #ececec;
+  --skin-color: #393939;
+
+  --box-shadow: inset 0 10px 5px rgba(255, 255, 255, 0.02),
+  inset 0 -10px 15px rgba(0, 0, 0, 0.9);
+  --border-top: solid 2px #000;
+}
