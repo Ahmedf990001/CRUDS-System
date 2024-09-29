@@ -24,17 +24,17 @@ function setActiveStyle(color) {
 };
 
 /* ========== Theme Light And Dark Mode ========== */
-const dayNight = document.querySelector(".dark-mode");
-dayNight.onclick = function() {
-  dayNight.querySelector("svg").classList.toggle("fa-sun");
-  dayNight.querySelector("svg").classList.toggle("fa-moon");
+const darkMode = document.querySelector(".dark-mode");
+darkMode.onclick = function() {
+  darkMode.querySelector("svg").classList.toggle("fa-sun");
+  darkMode.querySelector("svg").classList.toggle("fa-moon");
   document.body.classList.toggle("dark");
 };
 
 window.onload = function() {
   if(document.body.classList.contains("dark")) {
-    dayNight.querySelector("svg").classList.add("fa-sun");
+    darkMode.querySelector("svg").classList.add("fa-sun");
   }else {
-    dayNight.querySelector("svg").classList.add("fa-moon");
+    darkMode.querySelector("svg").classList.add("fa-moon");
   }
 };
