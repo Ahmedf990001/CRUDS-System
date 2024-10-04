@@ -37,6 +37,7 @@ main {
 section {
   width: 100%;
   padding: 6%;
+  z-index: 1;
   animation: slideSection 0.5s ease;
 }
 
@@ -73,6 +74,7 @@ input {
   box-shadow: var(--box-shadow);
   border-top: var(--border-top);
   border-radius: 25px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -133,22 +135,29 @@ Inputs-Content
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: -1;
 }
 
 /* ********************
 Presentation-Card
 ******************** */
 .card {
+  position: relative;
   width: 400px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
   border-radius: 5px;
-  padding: 15px ;
+  padding: 15px;
+  background: var(--bg-color);
   box-shadow: var(--box-shadow);
   border-top: var(--border-top);
 }
 
 .card li {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -158,26 +167,23 @@ Presentation-Card
   color: var(--text-color);
   box-shadow: var(--box-shadow);
   border-top: var(--border-top);
-
 }
 
-.card li::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 2px;
-  height: 80%;
-  background-color: var();
+.card .countVal {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: -1;
+  overflow: hidden;
 }
 
-.card li h3 {
+.card li h4 {
   text-transform: uppercase;
 }
 
 .card li span {
-  color: var(--textColor-2);
+  color: var(--text-color-2);
 }
 
 /* ********************
@@ -193,6 +199,10 @@ Inputs
 
 .price {
   grid-template-columns: repeat(4,1fr);
+}
+
+#submit {
+  opacity: 0.2;
 }
 /* ********************
 End Inputs-Section -
