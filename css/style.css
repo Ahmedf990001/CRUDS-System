@@ -135,8 +135,6 @@ Inputs-Content
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  z-index: -1;
 }
 
 /* ********************
