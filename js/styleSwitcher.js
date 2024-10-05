@@ -5,13 +5,27 @@ styleSwitcherToggle.onclick = () => {
   document.querySelector(".style-switcher").classList.toggle("open");
 };
 
+
 // ------------------------------
-// Hide Style - Switcher On Scroll
-window.onscroll = function() {
-  if(document.querySelector(".style-switcher").classList.contains("open")) {
-    document.querySelector(".style-switcher").classList.remove("open");
-  }
-}
+// hide and show - style-switcher and scroll-up
+const styleSwitcher = document.querySelector('.style-switcher');
+const scrollUp = document.querySelector('.scroll-up');
+
+// ------------------------------
+window.onscroll = () => {
+  if(styleSwitcher.classList.contains("open")) {
+    styleSwitcher.classList.remove("open");
+  };
+  if(scrollY >= 300) {
+    scrollUp.classList.add('open');
+  }else {
+    scrollUp.classList.remove('open');
+  };
+};
+// ------------------------------
+scrollUp.onclick = () => {
+  scroll(0,0)
+};
 
 // ------------------------------
 const body = document.body;
