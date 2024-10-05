@@ -1,5 +1,5 @@
 /* ********************
-Start Color-Bar
+Start Style-Switcher
 ******************** */
 nav {
   position: fixed;
@@ -36,6 +36,11 @@ nav ul li {
   background: var(--primary-color);
   box-shadow: var(--box-shadow);
   border-top: var(--border-top);
+  transition: 0.4s;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
 }
 
 .style-switcher-toggler,
@@ -76,5 +81,52 @@ nav ul .dark-mode {
   background-color: #ec1839;
 }
 /* ********************
-End Color-Bar
+End Style-Switcher
+******************** */
+
+/* ********************
+Start Scroll-Up
+******************** */
+.scroll-up {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  left: -100px;
+  background: var(--skin-color);
+  color: var(--text-color);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0.5;
+  transition: 0.4s;
+}
+.scroll-up.open {
+  left: 40px;
+}
+
+.scroll-up:hover {
+  opacity: 1;
+}
+
+.scroll-up span {
+  font-size: 30px;
+  transform: rotate(360deg) translate(-100px);
+  transition: 0.4s;
+}
+
+.scroll-up.open span {
+  transform: rotate(-22.5deg);
+}
+
+.scroll-up:hover span {
+  transform: rotate(-90deg) translate(50px);
+}
+
+/* ********************
+End Scroll-Up
 ******************** */

@@ -180,6 +180,11 @@ Presentation-Card
   text-transform: uppercase;
 }
 
+.card li h4 span {
+  opacity: 0;
+  transition: 0.4s;
+}
+
 .card li span {
   color: var(--text-color-2);
 }
