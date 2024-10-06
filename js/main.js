@@ -139,8 +139,8 @@ submit.onclick = () => {
   if (
     count.value <= 100 &&
     mode === "create" &&
-    title.value >= 1 &&
-    price.value != "" &&
+    title.value >= "" &&
+    price.value != 1 &&
     taxes.value != "" &&
     ads.value != "" &&
     category.value != ""
