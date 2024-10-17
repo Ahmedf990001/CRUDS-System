@@ -1,13 +1,10 @@
 :root {
-  --primary-color: #eee;
-  --bg-color:#eee;
-  --bg-color-2:#888;
-  --text-color: #444;
+  --primary: #fff;
+  --bg-color: #eee;
+  --text-color: #050316;
   --text-color-2: #666;
-  --text-color-3: #fff;
-  --skin-color: #fff;
-
-
+  --button-color: #000;
+    
   --box-shadow: inset 0 10px 5px rgba(0, 0, 0, 0.05),
   0 10px 8px rgba(0, 0, 0, 0.05),
   0 5px 15px rgba(0, 0, 0, 0.05),
@@ -16,12 +13,10 @@
 }
 
 body.dark {
-  --primary-color: #393939;
+  --primary: #151515;
   --bg-color: #393939;
-  --bg-color-2: #151515;
   --text-color: #fff;
   --text-color-2: #ececec;
-  --skin-color: #151515;
 
   --box-shadow: inset 0 10px 5px rgba(0, 0, 0, 0.2),
   inset 0 -10px 5px rgba(0, 0, 0, 0.05),

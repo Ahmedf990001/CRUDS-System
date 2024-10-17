@@ -23,17 +23,18 @@ nav ul {
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
-  background: var(--primary-color);
+  background: var(--bg-color);
   box-shadow: var(--box-shadow);
   border-top: var(--border-top);
   border-radius: 25px;
 }
 
 nav ul li {
-  padding: 15px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer;
-  background: var(--primary-color);
+  background: var(--bg-color);
   box-shadow: var(--box-shadow);
   border-top: var(--border-top);
   transition: 0.4s;
@@ -62,22 +63,37 @@ nav ul .dark-mode {
   right: 20px;
 }
 
-
-.color-1 {
-  background-color: #4478be;
+.dark-mode svg {
+  fill: var(--text-color);
 }
-.color-2 {
+
+.dark-mode svg:last-child {
+  display: none;
+}
+
+.dark .dark-mode svg:first-child {
+  display: none;
+}
+
+.dark .dark-mode svg:last-child {
+  display: block;
+}
+
+.skin-1 {
+  background-color: #2f27ce;
+}
+.skin-2 {
   background-color: #37b182;
 }
-.color-3 {
+.skin-3 {
   background-color: var(--bg-color);
 }
 
-.color-4 {
-  background-color: #f021b2;
+.skin-4 {
+  background-color: #f582ae;
 }
 
-.color-5 {
+.skin-5 {
   background-color: #ec1839;
 }
 /* ********************
@@ -97,8 +113,8 @@ Start Scroll-Up
   position: fixed;
   bottom: 30px;
   left: -100px;
-  background: var(--skin-color);
   color: var(--text-color);
+  background: var(--primary);
   box-shadow: var(--box-shadow);
   cursor: pointer;
   z-index: 1;
