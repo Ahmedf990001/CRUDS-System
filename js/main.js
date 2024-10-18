@@ -108,7 +108,7 @@ function getValues() {
       opacity: 1;
     `;
   } else {
-    submit.innerHTML = '<i class="fa-solid fa-lock"></i> Sorry';
+    submit.innerHTML = '<i class="fa-solid fa-lock"></i> ';
     submit.style = `
       opacity: 0.2;
     `;
